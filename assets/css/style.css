@@ -143,3 +143,5 @@ footer .links{display:flex;gap:18px}
 footer .links a{color:var(--muted);text-decoration:none}
 footer .links a:hover{color:var(--accent)}
 .hero-text{max-width:600px}
+@media (max-width:720px){.hero-id .avatar{align-self:center}}
+@media (max-width:720px){.hero-id{align-items:center;text-align:center}.hero-text{justify-items:center}}
