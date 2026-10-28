@@ -145,3 +145,6 @@ footer .links a:hover{color:var(--accent)}
 .hero-text{max-width:600px}
 @media (max-width:720px){.hero-id .avatar{align-self:center}}
 @media (max-width:720px){.hero-id{align-items:center;text-align:center}.hero-text{justify-items:center}}
+footer .links a{display:inline-flex;align-items:center;gap:8px}
+footer .links a:hover .li-icon{color:#0A66C2}
+footer .li-icon{color:#0A66C2}
