@@ -132,3 +132,4 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .hero .wrap{position:relative;padding-block:96px 88px}
 @media (max-width:720px){.hero-art{opacity:.3}}
 @media (max-width:560px){.brand span{display:none}.nav ul{gap:16px}}
+.nav .wrap{justify-content:flex-end}
