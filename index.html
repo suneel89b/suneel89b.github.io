@@ -24,11 +24,77 @@
 </nav>
 
 <header class="hero">
+  <svg class="hero-art" viewBox="0 0 1200 460" preserveAspectRatio="xMaxYMid slice" aria-hidden="true" focusable="false">
+    <defs>
+      <radialGradient id="glow" cx="78%" cy="118%" r="70%">
+        <stop offset="0" stop-color="#2DD4BF" stop-opacity=".35"/>
+        <stop offset=".45" stop-color="#0EA5E9" stop-opacity=".12"/>
+        <stop offset="1" stop-color="#0F1A2B" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="earth" cx="40%" cy="25%" r="80%">
+        <stop offset="0" stop-color="#16324A"/>
+        <stop offset="1" stop-color="#0A1420"/>
+      </radialGradient>
+      <linearGradient id="fade" x1="0" x2="1">
+        <stop offset="0" stop-color="#0F1A2B"/>
+        <stop offset=".38" stop-color="#0F1A2B" stop-opacity=".85"/>
+        <stop offset=".62" stop-color="#0F1A2B" stop-opacity="0"/>
+      </linearGradient>
+      <linearGradient id="swath" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#5EEAD4" stop-opacity=".35"/>
+        <stop offset="1" stop-color="#5EEAD4" stop-opacity="0"/>
+      </linearGradient>
+      <clipPath id="earthClip"><circle cx="980" cy="860" r="560"/></clipPath>
+      <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#9AA7BB" fill-opacity=".18"/></pattern>
+    </defs>
+    <rect width="1200" height="460" fill="url(#dots)"/>
+    <rect width="1200" height="460" fill="url(#glow)"/>
+    <g transform="translate(0 -52)">
+    <!-- orbits -->
+    <g fill="none" stroke="#5EEAD4" stroke-opacity=".28">
+      <ellipse cx="980" cy="860" rx="700" ry="610" stroke-dasharray="2 7"/>
+      <ellipse cx="980" cy="860" rx="820" ry="560" transform="rotate(-12 980 860)" stroke-opacity=".18"/>
+    </g>
+    <!-- earth with graticule and imagery tiles -->
+    <circle cx="980" cy="860" r="560" fill="url(#earth)" stroke="#5EEAD4" stroke-opacity=".55" stroke-width="1.5"/>
+    <circle cx="980" cy="860" r="572" fill="none" stroke="#2DD4BF" stroke-opacity=".18" stroke-width="10"/>
+    <g clip-path="url(#earthClip)" fill="none" stroke="#9AA7BB" stroke-opacity=".16">
+      <ellipse cx="980" cy="860" rx="140" ry="560"/><ellipse cx="980" cy="860" rx="300" ry="560"/><ellipse cx="980" cy="860" rx="440" ry="560"/>
+      <ellipse cx="980" cy="860" rx="560" ry="140"/><ellipse cx="980" cy="860" rx="560" ry="300"/><ellipse cx="980" cy="860" rx="560" ry="440"/>
+    </g>
+    <g clip-path="url(#earthClip)">
+      <g fill="#2DD4BF">
+        <rect x="838" y="356" width="14" height="14" fill-opacity=".55"/><rect x="854" y="356" width="14" height="14" fill-opacity=".3"/><rect x="870" y="356" width="14" height="14" fill-opacity=".7"/><rect x="886" y="356" width="14" height="14" fill-opacity=".2"/>
+        <rect x="838" y="372" width="14" height="14" fill-opacity=".25"/><rect x="854" y="372" width="14" height="14" fill-opacity=".65"/><rect x="870" y="372" width="14" height="14" fill-opacity=".4"/><rect x="886" y="372" width="14" height="14" fill-opacity=".55"/>
+        <rect x="838" y="388" width="14" height="14" fill-opacity=".6"/><rect x="854" y="388" width="14" height="14" fill-opacity=".2"/><rect x="870" y="388" width="14" height="14" fill-opacity=".5"/><rect x="886" y="388" width="14" height="14" fill-opacity=".3"/>
+      </g>
+      <rect x="836" y="354" width="66" height="50" fill="none" stroke="#5EEAD4" stroke-opacity=".8"/>
+    </g>
+    <!-- imaging swath from satellite to the tile -->
+    <path d="M985 150 L836 354 L902 354 Z" fill="url(#swath)"/>
+    <!-- satellite -->
+    <g transform="translate(985 150) rotate(-18)">
+      <rect x="-34" y="-7" width="24" height="14" rx="1.5" fill="#1E3A5F" stroke="#5EEAD4" stroke-opacity=".9"/>
+      <rect x="10" y="-7" width="24" height="14" rx="1.5" fill="#1E3A5F" stroke="#5EEAD4" stroke-opacity=".9"/>
+      <line x1="-22" y1="-7" x2="-22" y2="7" stroke="#5EEAD4" stroke-opacity=".5"/><line x1="22" y1="-7" x2="22" y2="7" stroke="#5EEAD4" stroke-opacity=".5"/>
+      <rect x="-9" y="-10" width="18" height="20" rx="3" fill="#E6ECF5"/>
+      <circle cx="0" cy="12" r="3" fill="#2DD4BF"/>
+    </g>
+    </g>
+    <g transform="translate(0 46)">
+    <!-- neural network constellation -->
+    <g stroke="#9AA7BB" stroke-opacity=".22">
+      <line x1="660" y1="70" x2="740" y2="40"/><line x1="660" y1="70" x2="740" y2="110"/><line x1="660" y1="150" x2="740" y2="110"/><line x1="660" y1="150" x2="740" y2="40"/>
+      <line x1="740" y1="40" x2="820" y2="80"/><line x1="740" y1="110" x2="820" y2="80"/><line x1="740" y1="110" x2="820" y2="150"/><line x1="740" y1="40" x2="820" y2="150"/>
+    </g>
+    <g fill="#5EEAD4"><circle cx="660" cy="70" r="3.5" fill-opacity=".6"/><circle cx="660" cy="150" r="3.5" fill-opacity=".6"/><circle cx="740" cy="40" r="3.5" fill-opacity=".8"/><circle cx="740" cy="110" r="3.5" fill-opacity=".8"/><circle cx="820" cy="80" r="4.5"/><circle cx="820" cy="150" r="3.5" fill-opacity=".6"/></g>
+    </g>
+    <rect width="1200" height="460" fill="url(#fade)"/>
+  </svg>
   <div class="wrap">
-    <span class="label">Professional Portfolio</span>
     <h1>Suneel Bandarupalli</h1>
     <p class="role">Software developer with 14+ years in IT, bringing AI and machine learning into data platforms and IT operations.</p>
-    <span class="status"><i aria-hidden="true"></i>M.S. in AI – Data Analytics, Indiana Wesleyan University · updated weekly</span>
+    <span class="status"><i aria-hidden="true"></i>M.S. in AI – Data Analytics, Indiana Wesleyan University</span>
   </div>
 </header>
 
@@ -41,7 +107,7 @@
         <div class="prose">
           <p>I am a software developer with over 14 years of IT experience. I started my career as a JD Edwards CNC consultant after completing my bachelor's degree in electronics and computers. There I learned how large enterprise systems are installed, upgraded, and kept running.</p>
           <p>After a few years in the industry, I earned a master's degree in computer science and worked as a graduate research assistant. In my research, I used a hybrid wavelet-artificial intelligence fusion approach (WAIFA) to create large data samples that improved the accuracy and performance of the Continuous Change Detection and Classification (CCDC) algorithm. This was my first hands-on work applying AI to real data problems.</p>
-          <p>After graduation, I joined a data center as a front-end developer and worked on satellite imagery distribution platforms. I work closely with metadata quality, system upgrades, and download metrics. When an upgrade from Oracle Linux 7 to Oracle Linux 8 broke compatibility for our applications, we moved them from virtual machines to containers, one at a time, starting with the lowest risk.</p>
+          <p>After graduation, I joined a data center as a front-end developer and worked on satellite imagery distribution platforms.</p>
           <p>Today, I am pursuing a master's degree in AI – Data Analytics at Indiana Wesleyan University. My goal is to bring AI into IT operations in a practical, reliable way, using it to catch data problems earlier, reduce downtime, and help teams make better decisions.</p>
         </div>
       </div>
@@ -126,7 +192,6 @@
           </div>
         </a>
       </div>
-      <p class="note">A new artifact is added each week of the course.</p>
     </div>
   </section>
 </main>
@@ -134,7 +199,6 @@
 <footer>
   <div class="wrap">
     <span>© 2026 Suneel Bandarupalli</span>
-    <span>Indiana Wesleyan University · AIML-500</span>
   </div>
 </footer>
 </body>
