@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dietary Choices Assistant | Suneel Bandarupalli</title>
+<meta name="description" content="Artifact 2: an AI chatbot that gives personalized meal plans and recipes based on each user's goals, preferences, and dietary restrictions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <ul>
+      <li><a href="../../">Home</a></li>
+      <li><a href="../../#about">About</a></li>
+      <li><a href="../../#skills">Skills</a></li>
+      <li><a href="../../#artifacts" aria-current="page">Artifacts</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+  <p class="crumbs"><a href="../../#artifacts">Artifacts</a> / Artifact 2</p>
+
+  <div class="art-head">
+    <span class="label">Artifact 2 · AI chatbot</span>
+    <h1>Dietary Choices Assistant: A Personalized AI Meal-Planning Chatbot</h1>
+    <p class="intro">A conversational AI assistant that asks users about their goals, preferences, and restrictions, then suggests meal plans and recipes that fit them.</p>
+    <p class="team"><b>Group project</b>, built on the Mizou chatbot platform and published from teammate Jagadeesh Kommineni's account. <b>My part:</b> design discussions, including defining the bot's purpose and what it should and should not do.</p>
+  </div>
+
+  <div class="viewer" id="viewer">
+    <figure>
+      <img id="slide" src="screens/screen-1.jpg" alt="">
+    </figure>
+    <p class="caption" id="caption" aria-live="polite"></p>
+    <div class="vbar">
+      <button type="button" id="prev" aria-label="Previous screenshot">← Prev</button>
+      <span class="count" id="count">1 / 3</span>
+      <button type="button" id="next" aria-label="Next screenshot">Next →</button>
+    </div>
+    <div class="thumbs" id="thumbs" aria-label="All screenshots"></div>
+  </div>
+  <div class="actions">
+    <a class="btn primary" href="https://mizou.com/preview-bot?ID=164544" target="_blank" rel="noopener">Try the chatbot ↗</a>
+  </div>
+  <p class="note">Visitors can ask three questions without signing in. A free Mizou sign-in allows a longer conversation.</p>
+
+  <div class="fields">
+    <section class="field">
+      <h2>Description</h2>
+      <div class="prose">
+        <p>The Dietary Choices Assistant greets the user, asks a few questions about their goals and needs, and then offers meal plans or recipes that match. It can help with:</p>
+        <ul>
+          <li>Personalized meal plans based on dietary goals</li>
+          <li>Guidance on maintaining a balanced diet</li>
+          <li>Tips for healthy snacks and substitutions</li>
+          <li>Ideas for exploring creative meal options</li>
+          <li>Adjustments for preferences, restrictions, and health conditions</li>
+        </ul>
+        <p>In the example shown above, a user asks for high-protein Indian lunch ideas, both vegetarian and non-vegetarian. The assistant suggests Paneer Tikka Masala and Chicken Tandoori, offers a detailed recipe, and then provides the ingredients and step-by-step instructions.</p>
+      </div>
+    </section>
+
+    <section class="field">
+      <h2>Objective</h2>
+      <div class="prose"><p>We built this chatbot to learn how to design and deploy a practical AI assistant for a specific audience. Our goal was to turn a general-purpose language model into a focused tool that gives safe, personalized, and useful dietary suggestions.</p></div>
+    </section>
+
+    <section class="field">
+      <h2>Process</h2>
+      <div class="prose">
+        <p>Our group started by agreeing on the problem: people want healthier meals, but general advice does not fit their goals, cuisines, or health needs. I took part in the design discussions where we decided the bot's purpose and scope. We chose to focus on adults who want help planning meals, and we decided the bot should first ask questions to understand the user before making suggestions.</p>
+        <p>We then made several design decisions:</p>
+        <ul>
+          <li><b>Personalization first:</b> the bot gathers the user's goals, preferences, and restrictions before recommending anything.</li>
+          <li><b>Health-aware suggestions:</b> users can share health information, and the bot considers their conditions and dietary restrictions when giving suggestions.</li>
+          <li><b>Formal, clear tone:</b> we set the responses to stay formal and easy to follow, with recipes broken into ingredients and steps.</li>
+          <li><b>Privacy:</b> conversations are not saved or shared.</li>
+          <li><b>User control:</b> an Exit button at the top left lets the user end the conversation at any time.</li>
+        </ul>
+        <p>We configured these decisions in Mizou, tested the bot with sample requests like the one shown above, and published it with a shareable preview link.</p>
+      </div>
+    </section>
+
+    <section class="field">
+      <h2>Tools &amp; Technologies</h2>
+      <div class="prose">
+        <ul>
+          <li>Mizou (AI chatbot builder and hosting)</li>
+          <li>Generative AI language model (through Mizou)</li>
+          <li>Prompt and instruction design</li>
+          <li>GitHub Pages (publishing this portfolio)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="field">
+      <h2>Value Proposition</h2>
+      <div class="prose"><p class="vpq">This chatbot shows how a general AI model can be shaped into a focused assistant that gives people personalized, practical guidance while respecting their privacy.</p></div>
+    </section>
+
+    <section class="field">
+      <h2>Unique Value</h2>
+      <div class="prose"><p>Instead of giving the same advice to everyone, the assistant adapts to each user's cuisine, diet type, goals, and health needs. It also gives complete, usable answers, such as full recipes with ingredients and steps, rather than general tips.</p></div>
+    </section>
+
+    <section class="field">
+      <h2>Relevance</h2>
+      <div class="prose"><p>The same design steps apply to AI assistants in IT operations: define a clear purpose, decide what information the assistant needs, set guardrails and tone, protect user data, and test with real requests. Teams building internal help-desk or troubleshooting assistants can follow this approach to create tools people trust and actually use.</p></div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../../#artifacts">← Back to all artifacts</a>
+    <span>© 2026 Suneel Bandarupalli</span>
+    <span class="links"><a href="https://www.linkedin.com/in/suneelb/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg class="li-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="4" fill="currentColor"/><path fill="var(--bg)" d="M6.2 9.4h2.6V18H6.2zM7.5 5.3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM10.4 9.4h2.5v1.2h.04c.35-.66 1.2-1.36 2.47-1.36 2.64 0 3.13 1.74 3.13 4V18h-2.6v-4.2c0-1-.02-2.3-1.4-2.3-1.4 0-1.6 1.1-1.6 2.2V18h-2.6z"/></svg><span>LinkedIn</span></a></span>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const S = [
+    { src: "screens/screen-1.jpg", cap: "1. The welcome screen. The panel on the right describes the assistant's purpose and audience." },
+    { src: "screens/screen-2.jpg", cap: "2. A user asks for high-protein Indian lunch ideas, and the assistant offers vegetarian and non-vegetarian options." },
+    { src: "screens/screen-3.jpg", cap: "3. The assistant provides a complete recipe with ingredients and step-by-step instructions." }
+  ];
+  const N = S.length;
+  const img = document.getElementById("slide");
+  const cap = document.getElementById("caption");
+  const count = document.getElementById("count");
+  const prev = document.getElementById("prev");
+  const next = document.getElementById("next");
+  const thumbs = document.getElementById("thumbs");
+  let i = 1;
+  const btns = S.map((s, idx) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.setAttribute("aria-label", "Go to screenshot " + (idx + 1));
+    b.innerHTML = '<img src="' + s.src + '" alt="" loading="lazy">';
+    b.addEventListener("click", () => show(idx + 1));
+    thumbs.appendChild(b);
+    return b;
+  });
+  function show(k) {
+    i = Math.min(N, Math.max(1, k));
+    img.src = S[i - 1].src;
+    img.alt = S[i - 1].cap;
+    cap.textContent = S[i - 1].cap;
+    count.textContent = i + " / " + N;
+    prev.disabled = i === 1;
+    next.disabled = i === N;
+    btns.forEach((b, idx) => b.setAttribute("aria-current", String(idx + 1 === i)));
+  }
+  prev.addEventListener("click", () => show(i - 1));
+  next.addEventListener("click", () => show(i + 1));
+  document.addEventListener("keydown", e => {
+    if (e.key === "ArrowLeft") show(i - 1);
+    if (e.key === "ArrowRight") show(i + 1);
+  });
+  show(1);
+})();
+</script>
+</body>
+</html>
