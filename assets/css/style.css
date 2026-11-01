@@ -150,3 +150,12 @@ footer .links a:hover .li-icon{color:#0A66C2}
 footer .li-icon{color:#0A66C2}
 .viewer .caption{color:var(--band-ink);font-size:14.5px;padding:12px 4px 0;margin:0}
 .art-head + .viewer + .actions + .note{margin-top:10px}
+
+/* awards */
+.awards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.award{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px 20px 20px 22px;box-shadow:var(--shadow);display:grid;gap:8px;align-content:start;overflow:hidden}
+.award::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}
+.award-org{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.award h3{font-size:18px;font-weight:600}
+.award p{color:var(--muted);font-size:15px}
+@media (max-width:420px){.nav ul{gap:12px;font-size:14px}}
