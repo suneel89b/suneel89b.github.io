@@ -180,3 +180,32 @@ footer .li-icon{color:#0A66C2}
 .tablewrap thead th{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--sunk)}
 .tablewrap tbody th{font-weight:600}
 .tablewrap tbody tr:last-child th,.tablewrap tbody tr:last-child td{border-bottom:0}
+/* Artifact 4: explainer */
+.paper .lead{font-size:clamp(19px,2.4vw,22px);font-weight:500;line-height:1.45;color:var(--ink);border-left:4px solid var(--accent);padding-left:16px}
+.steps{display:grid;gap:12px;margin:0;padding-left:30px;font-size:16.5px}
+.steps li{padding-left:4px}
+.steps li::marker{font-family:var(--mono);color:var(--accent);font-weight:500}
+.diagram{margin:18px 0 6px;display:grid;gap:10px}
+.diagram-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:16px}
+.diagram svg{display:block;width:100%;min-width:620px;height:auto}
+.diagram figcaption{font-size:14.5px;color:var(--muted)}
+.d-head{font-family:var(--sans);font-size:17px;font-weight:600;fill:var(--ink)}
+.d-sub{font-family:var(--mono);font-size:12.5px;fill:var(--muted)}
+.d-wire{stroke:var(--line);stroke-width:1.5;fill:none}
+.d-line{stroke:var(--line)}
+.d-node circle{fill:var(--accent-soft);stroke:var(--accent);stroke-width:2}
+.d-strong circle{fill:var(--accent);fill-opacity:.35}
+.d-out-a{fill:var(--accent)}
+.d-out-a-t{font-family:var(--mono);font-size:16px;fill:var(--accent-ink)}
+.d-out-b{fill:var(--sunk);stroke:var(--line)}
+.d-out-b-t{font-family:var(--mono);font-size:16px;fill:var(--muted)}
+.d-fwd{stroke:var(--accent);stroke-width:2.5;fill:none}
+.d-back{stroke:#B7791F;stroke-width:2.5;stroke-dasharray:8 6;fill:none}
+.d-accent-fill{fill:var(--accent)}
+.d-warm-fill{fill:#B7791F}
+.d-cap{font-family:var(--sans);font-size:13.5px;fill:var(--ink);paint-order:stroke;stroke:var(--surface);stroke-width:6px}
+.d-warm{fill:#B7791F}
+.check{margin-top:18px;background:var(--accent-soft);border-radius:12px;padding:18px 20px;display:grid;gap:8px}
+.check .label{color:var(--accent)}
+.check .hint{display:block;margin-top:6px;font-size:14.5px;color:var(--muted)}
+@media (prefers-color-scheme:dark){.d-back,.d-warm-fill,.d-warm{stroke:#F3C969}.d-warm-fill,.d-warm{fill:#F3C969}.d-warm{stroke:var(--surface)}}

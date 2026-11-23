@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Neural Networks, Explained Simply | Suneel Bandarupalli</title>
+<meta name="description" content="Artifact 4: a plain-language explanation of how neural networks learn, built for non-technical teams adopting AI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <ul>
+      <li><a href="../../">Home</a></li>
+      <li><a href="../../#about">About</a></li>
+      <li><a href="../../#skills">Skills</a></li>
+      <li><a href="../../#awards">Awards</a></li>
+      <li><a href="../../#artifacts" aria-current="page">Artifacts</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+  <p class="crumbs"><a href="../../#artifacts">Artifacts</a> / Artifact 4</p>
+
+  <div class="art-head">
+    <span class="label">Artifact 4 · Explainer for non-technical teams</span>
+    <h1>Neural Networks, Explained Simply</h1>
+    <p class="intro">A short, plain-language explanation of how a neural network learns, written so that people without a technical background can understand the AI tools they are being asked to use.</p>
+    <p class="team"><b>Individual work.</b> AIML-500: Machine Learning Fundamentals, Communicating for Learning.</p>
+  </div>
+
+  <article class="paper">
+    <span class="label">The explanation</span>
+
+    <p class="lead">A neural network is a computer program that learns to recognize patterns by practicing on many examples and correcting its own mistakes.</p>
+
+    <h2>Think of a new employee</h2>
+    <p>Imagine teaching a new employee to sort satellite images into "water," "forest," or "city." You do not give them a rulebook. You show them thousands of labeled images, let them guess, and tell them when they are wrong. Over time, they get better. A neural network learns the same way.</p>
+
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><b>Input.</b> The network receives raw data, like the pixels of a satellite image.</li>
+      <li><b>Layers of small decision-makers.</b> The data passes through layers of "neurons." Each neuron does a tiny calculation and passes the result on. Early layers notice simple things, like edges and colors. Deeper layers combine those into bigger patterns, like rivers, fields, or city blocks.</li>
+      <li><b>A guess.</b> The last layer gives an answer, such as "80% water."</li>
+      <li><b>Learning from mistakes.</b> If the guess is wrong, the network works backward and adjusts the strength of the connections between its neurons. This is called backpropagation. After thousands of rounds, the guesses become accurate.</li>
+    </ol>
+
+    <figure class="diagram" aria-labelledby="dia-cap">
+      <div class="diagram-scroll">
+        <svg viewBox="0 0 960 430" role="img" aria-labelledby="dia-t dia-d">
+          <title id="dia-t">How a neural network reads a satellite image</title>
+          <desc id="dia-d">A satellite image enters the input layer. Information flows forward through a layer that finds edges and colors, then a layer that finds shapes like rivers and fields, to an output that guesses water 80 percent. A dashed arrow below runs backward, showing that after a wrong guess the connection weights are adjusted.</desc>
+          <defs>
+            <marker id="fw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" class="d-accent-fill"/></marker>
+            <marker id="bw" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" class="d-warm-fill"/></marker>
+          </defs>
+          <!-- column headings -->
+          <g class="d-head" text-anchor="middle">
+            <text x="95" y="34">Input</text>
+            <text x="340" y="34">Layer 1</text>
+            <text x="560" y="34">Layer 2</text>
+            <text x="820" y="34">Answer</text>
+          </g>
+          <g class="d-sub" text-anchor="middle">
+            <text x="95" y="56">raw pixels</text>
+            <text x="340" y="56">edges and colors</text>
+            <text x="560" y="56">rivers, fields, blocks</text>
+            <text x="820" y="56">best guess</text>
+          </g>
+          <!-- image -->
+          <g transform="translate(30 120)">
+            <rect width="130" height="130" rx="8" fill="#2F6B4F"/>
+            <path d="M0 78 C32 65 52 91 84 78 S130 62 130 62 V130 H0 Z" fill="#2B6CB0"/>
+            <rect x="78" y="12" width="40" height="34" rx="3" fill="#C9C3B6"/>
+            <path d="M12 16 L62 16 L62 56 L12 56Z" fill="#D9B95B" fill-opacity=".85"/>
+            <rect width="130" height="130" rx="8" fill="none" class="d-line" stroke-width="1.5"/>
+          </g>
+          <!-- connections -->
+          <g class="d-wire">
+            <path d="M175 185H286"/>
+            <path d="M290 110L510 140M290 110L510 230M290 110L510 320M290 185L510 140M290 185L510 230M290 185L510 320M290 260L510 140M290 260L510 230M290 260L510 320M290 335L510 140M290 335L510 230M290 335L510 320"/>
+            <path d="M610 140L740 185M610 230L740 185M610 320L740 185M610 140L740 275M610 230L740 275M610 320L740 275"/>
+          </g>
+          <!-- layer 1 nodes -->
+          <g class="d-node">
+            <circle cx="300" cy="110" r="14"/><circle cx="300" cy="185" r="14"/><circle cx="300" cy="260" r="14"/><circle cx="300" cy="335" r="14"/>
+            <circle cx="380" cy="110" r="14"/><circle cx="380" cy="185" r="14"/><circle cx="380" cy="260" r="14"/><circle cx="380" cy="335" r="14"/>
+          </g>
+          <g class="d-wire"><path d="M314 110H366M314 185H366M314 260H366M314 335H366"/></g>
+          <!-- layer 2 nodes -->
+          <g class="d-node d-strong">
+            <circle cx="520" cy="140" r="14"/><circle cx="520" cy="230" r="14"/><circle cx="520" cy="320" r="14"/>
+            <circle cx="600" cy="140" r="14"/><circle cx="600" cy="230" r="14"/><circle cx="600" cy="320" r="14"/>
+          </g>
+          <g class="d-wire"><path d="M534 140H586M534 230H586M534 320H586"/></g>
+          <!-- outputs -->
+          <g>
+            <rect x="740" y="160" width="160" height="50" rx="25" class="d-out-a"/>
+            <text x="820" y="191" text-anchor="middle" class="d-out-a-t">water 80%</text>
+            <rect x="740" y="250" width="160" height="50" rx="25" class="d-out-b"/>
+            <text x="820" y="281" text-anchor="middle" class="d-out-b-t">city 20%</text>
+          </g>
+          <!-- forward arrow -->
+          <path d="M40 375H900" class="d-fwd" marker-end="url(#fw)"/>
+          <text x="470" y="368" text-anchor="middle" class="d-cap">Information flows forward, one layer at a time</text>
+          <!-- backward arrow -->
+          <path d="M900 410H60" class="d-back" marker-end="url(#bw)"/>
+          <text x="470" y="402" text-anchor="middle" class="d-cap d-warm">After a wrong guess, connection weights are adjusted backward</text>
+        </svg>
+      </div>
+      <figcaption id="dia-cap">Figure 1. Each layer builds on the one before it. Learning happens when the network compares its guess with the right answer and adjusts its connections.</figcaption>
+    </figure>
+
+    <h2>Why "deep"?</h2>
+    <p>A network with many layers is called a deep neural network. More layers let it learn more complex patterns.</p>
+
+    <h2>Why it matters</h2>
+    <p>In my work with satellite imagery, a person cannot review millions of images manually. A trained neural network can label new images automatically within seconds, so people can focus on checking the results and making decisions.</p>
+
+    <div class="check">
+      <span class="label">Check yourself</span>
+      <p>If the network keeps calling shadows "water," would you change its layers, or show it more labeled examples of shadows? <span class="hint">Hint: a network can only learn patterns it has seen.</span></p>
+    </div>
+  </article>
+
+  <div class="fields">
+    <section class="field">
+      <h2>Description</h2>
+      <div class="prose"><p>A one-page explainer that teaches how neural networks learn, using an everyday analogy (training a new employee), four short steps, a visual diagram of the layers, and a real example from satellite imagery. It ends with a quick self-check question so readers can test their understanding.</p></div>
+    </section>
+
+    <section class="field">
+      <h2>Objective</h2>
+      <div class="prose"><p>To practice the course challenge of explaining a complex idea simply, and to apply communication strategies from the lesson, such as storytelling, chunking, and progressive disclosure, to a technical topic.</p></div>
+    </section>
+
+    <section class="field">
+      <h2>Process</h2>
+      <div class="prose">
+        <p>I used an AI tool to understand neural networks in more detail and to organize my ideas. The first explanation it produced was too technical for a general audience, so I asked for simpler language, an everyday analogy, and short steps. I then added the satellite imagery example from my own work and wrote the final version in my own words for the class discussion.</p>
+        <p>In the discussion, a classmate suggested that a diagram of the layers would help readers who think visually. For this portfolio version, I added that diagram, along with a short self-check question so readers can apply what they learned.</p>
+      </div>
+    </section>
+
+    <section class="field">
+      <h2>Tools &amp; Technologies</h2>
+      <div class="prose">
+        <ul>
+          <li>Claude (Anthropic) for research support and organizing ideas</li>
+          <li>Course lesson on communication strategies for learning (AIML-500)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="field">
+      <h2>Value Proposition</h2>
+      <div class="prose"><p class="vpq">This explainer gives IT managers a ready-made way to introduce AI to their teams, so people understand the tools they are asked to trust instead of treating them as a black box.</p></div>
+    </section>
+
+    <section class="field">
+      <h2>Unique Value</h2>
+      <div class="prose"><p>It explains neural networks without math, using a familiar workplace analogy and a real example from my own field. The diagram shows both how information flows forward and how the network learns backward from its mistakes, which is the part most simple explanations leave out.</p></div>
+    </section>
+
+    <section class="field">
+      <h2>Relevance</h2>
+      <div class="prose"><p>When an organization introduces AI, the biggest barrier is often understanding, not technology. People are more willing to adopt a tool, and more likely to question it when something looks wrong, when they know how it works. Clear explanations like this one help leaders build that trust during change.</p></div>
+    </section>
+
+    <section class="field refs">
+      <h2>References</h2>
+      <div class="prose refs">
+        <p>Indiana Wesleyan University. (n.d.). <i>Communicating for learning</i> [Discussion prompt]. AIML-500: Machine Learning Fundamentals. Brightspace.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="../../#artifacts">← Back to all artifacts</a>
+    <span>© 2026 Suneel Bandarupalli</span>
+    <span class="links"><a href="https://www.linkedin.com/in/suneelb/" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg class="li-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false"><rect width="24" height="24" rx="4" fill="currentColor"/><path fill="var(--bg)" d="M6.2 9.4h2.6V18H6.2zM7.5 5.3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zM10.4 9.4h2.5v1.2h.04c.35-.66 1.2-1.36 2.47-1.36 2.64 0 3.13 1.74 3.13 4V18h-2.6v-4.2c0-1-.02-2.3-1.4-2.3-1.4 0-1.6 1.1-1.6 2.2V18h-2.6z"/></svg><span>LinkedIn</span></a></span>
+  </div>
+</footer>
+</body>
+</html>
